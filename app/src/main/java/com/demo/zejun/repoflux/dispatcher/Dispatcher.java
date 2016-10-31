@@ -1,6 +1,7 @@
 package com.demo.zejun.repoflux.dispatcher;
 
 import com.demo.zejun.repoflux.actions.Action;
+import com.demo.zejun.repoflux.stores.Store;
 import com.squareup.otto.Bus;
 
 public class Dispatcher {
@@ -27,8 +28,8 @@ public class Dispatcher {
         bus.unregister(cls);
     }
 
-    public void emitChange() { //发送事件给Store模块。
-
+    public void emitChange(Store.StoreChangeEvent event) { //由Store模块调用来发送事件。
+        post(event);
     }
 
     public void dispatch(String type, Object... data) { //分发原始的事件，并把键值对转换成为Action。

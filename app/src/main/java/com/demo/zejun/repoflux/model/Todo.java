@@ -33,7 +33,7 @@ public class Todo implements Cloneable, Comparable<Todo> {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Todo clone() throws CloneNotSupportedException {
         return new Todo(id, text, complete);
     }
 
