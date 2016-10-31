@@ -3,4 +3,5 @@
     <string name="edit_text_hint">What needs to be done</string>
     <string name="add">Add</string>
     <string name="clear_completed">Clear completed</string>
+    <string name="delete">Delete</string>
 </resources>
