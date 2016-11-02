@@ -4,6 +4,8 @@ import com.demo.zejun.repoflux.actions.Action;
 import com.demo.zejun.repoflux.actions.TodoActions;
 import com.demo.zejun.repoflux.dispatcher.Dispatcher;
 import com.demo.zejun.repoflux.model.Todo;
+import com.squareup.otto.Subscribe;
+
 import android.util.Log;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -37,6 +39,7 @@ public class TodoStore extends Store {
     }
 
     @Override
+    @Subscribe
     public void onAction(Action action) {
         long id;
         switch (action.getType()) {
