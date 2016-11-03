@@ -20,13 +20,13 @@ public class ActionCreator {
 
     public void add(int leftNum, int rightNum) {
         if (mDispatcher != null) {
-            mDispatcher.dispatch(CalculatorActions.ADD, CalculatorActions.KEY_LEFT_NUM, leftNum, CalculatorActions.KEY_RIGHT_NUM, rightNum);
+            mDispatcher.dispatch(CalActions.ADD, CalActions.KEY_LEFT_NUM, leftNum, CalActions.KEY_RIGHT_NUM, rightNum);
         }
     }
 
     public void minus(int leftNum, int rightNum) {
         if (mDispatcher != null) {
-            mDispatcher.dispatch(CalculatorActions.MINUS, CalculatorActions.KEY_LEFT_NUM, leftNum, CalculatorActions.KEY_RIGHT_NUM, rightNum);
+            mDispatcher.dispatch(CalActions.MINUS, CalActions.KEY_LEFT_NUM, leftNum, CalActions.KEY_RIGHT_NUM, rightNum);
         }
     }
 }

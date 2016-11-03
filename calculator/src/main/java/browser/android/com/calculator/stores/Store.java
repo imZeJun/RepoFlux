@@ -17,7 +17,7 @@ public abstract class Store {
         }
     }
 
-    public abstract void onCalFinished(Action action);
+    public abstract void onAction(Action action);
 
     public abstract StoreChangeEvent changeEvent();
 

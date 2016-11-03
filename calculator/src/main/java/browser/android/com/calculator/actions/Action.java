@@ -12,6 +12,14 @@ public class Action {
         mData = data;
     }
 
+    public String getType() {
+        return mType;
+    }
+
+    public HashMap<String, Object> getData() {
+        return mData;
+    }
+
     public static class Builder {
 
         private String mType;

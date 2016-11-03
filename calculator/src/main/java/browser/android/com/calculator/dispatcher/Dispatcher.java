@@ -46,9 +46,10 @@ public class Dispatcher {
         }
         Action.Builder actionBuilder = new Action.Builder();
         actionBuilder.with(key);
+        int i = 0;
         if (data != null) {
-            for (Object object : data) {
-                actionBuilder.bundle(key, object);
+            while (i < data.length) {
+                actionBuilder.bundle((String) data[i++], data[i++]);
             }
         }
         post(actionBuilder.build());
